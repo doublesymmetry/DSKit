@@ -28,12 +28,8 @@ To create a new version, follow these steps:
 3. Commit the changes.
 4. Tag the commit with the new version number, e.g. **0.1.3**.
 5. Publish the tag.
-6. Checkout the PrivatePodSpecs-repository.
-7. Navigate to DSKit directory.
-8. Copy and paste the folder with the highest version number.
-9. Rename the newly created folder with the increased version number .
-10. Apply the same change to the **.podspec**-file within that folder and commit.
-11. Finally do a **pod update** on project that has DSKit as a depdendency.
+6. Github Actions will automatically deploy a new version! :rocket:
+7. Finally do a **pod update** on project that has DSKit as a depdendency. :sparkles:
 
 ## Author
 
