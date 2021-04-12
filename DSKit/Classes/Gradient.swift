@@ -19,10 +19,10 @@ import UIKit
         /// The parametric location of the stop.
         ///
         /// This value must be in the range `[0, 1]`.
-        public var location: CGFloat
+        public var location: Float
 
         /// Creates a color stop with a color and location.
-        public init(color: UIColor, location: CGFloat) {
+        public init(color: UIColor, location: Float) {
             self.color = color
             self.location = location
         }
@@ -42,7 +42,7 @@ import UIKit
     public init(colors: [UIColor]) {
         let intervals = colors.count - 1
         self.stops = colors.enumerated().map {
-            return Stop(color: $0.element, location: (1.0 / CGFloat(intervals)) * CGFloat($0.offset))
+            return Stop(color: $0.element, location: (1.0 / Float(intervals)) * Float($0.offset))
         }
     }
 }
