@@ -1,0 +1,16 @@
+name: publish
+on:
+  push:
+    branches:
+    - main
+    tags:
+    - '*'
+jobs:
+  publish-new-version:
+    runs-on: macos-11.0
+    steps:
+      - uses: actions/checkout@v2
+      - uses: maxim-lobanov/setup-cocoapods@v1
+        with:
+          version: 1.10.0
+      - run: pod repo push git@github.com:DoubleSymmetry/PrivatePodSpecs.git DSKit.podspec
