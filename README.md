@@ -20,6 +20,21 @@ it, simply add the following line to your Podfile:
 pod 'DSKit'
 ```
 
+## Creating a new version
+
+To create a new version, follow these steps:
+1. Open the **.podspec**-file in the projects directory with a text editor.
+2. Increase the minor version number next to **s.version** (If the last version was **0.1.2**, then the new folder should be called **0.1.3**).
+3. Commit the changes.
+4. Tag the commit with the new version number, e.g. **0.1.3**.
+5. Publish the tag.
+6. Checkout the PrivatePodSpecs-repository.
+7. Navigate to DSKit directory.
+8. Copy and paste the folder with the highest version number.
+9. Rename the newly created folder with the increased version number .
+10. Apply the same change to the **.podspec**-file within that folder and commit.
+11. Finally do a **pod update** on project that has DSKit as a depdendency.
+
 ## Author
 
 fabiandoublesymmetry, fabian@doublesymmetry.com
