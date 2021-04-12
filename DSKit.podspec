@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DSKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'Double Symmetrys shared library.'
   s.swift_version    = '5.0'
 
