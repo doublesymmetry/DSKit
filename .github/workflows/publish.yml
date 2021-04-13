@@ -9,13 +9,15 @@ jobs:
   publish-new-version:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/checkout@v2
-        with:
-          repository: DoubleSymmetry/PrivatePodSpecs
-          token: ${{ secrets.CI_ACCESS }}
-          path: .github/actions
-      - uses: maxim-lobanov/setup-cocoapods@v1
-        with:
-          version: 1.10.0
-      - run: pod repo push git@github.com:DoubleSymmetry/PrivatePodSpecs.git DSKit.podspec
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Bundle Update
+        run: gem install bundler:2.2.8
+      - name: Bundle Install
+        run: bundle install
+      - name: Add Specs Repo
+        run: pod repo add doublesymmetry https://${POD_GITHUB_API_TOKEN}@github.com/DoubleSymmetry/PrivatePodSpecs.git
+        env:
+          POD_GITHUB_API_TOKEN: ${{ secrets.CI_ACCESS }}
+      - name: Publish New Version
+        run: bundle exec pod repo push https://${POD_GITHUB_API_TOKEN}@github.com/DoubleSymmetry/PrivatePodSpecs.git DSKit.podspec
