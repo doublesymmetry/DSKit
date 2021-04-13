@@ -20,4 +20,6 @@ jobs:
         env:
           POD_GITHUB_API_TOKEN: ${{ secrets.CI_ACCESS }}
       - name: Publish Pod
-        run: bundle exec pod repo push https://${POD_GITHUB_API_TOKEN}@github.com/DoubleSymmetry/PrivatePodSpecs.git DSKit.podspec
+        run: pod repo push https://${POD_GITHUB_API_TOKEN}@github.com/DoubleSymmetry/PrivatePodSpecs.git DSKit.podspec
+        env:
+          POD_GITHUB_API_TOKEN: ${{ secrets.CI_ACCESS }}
