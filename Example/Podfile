@@ -1,6 +1,0 @@
-use_frameworks!
-target 'DSKit_Tests' do
-  pod 'DSKit', :path => '../'
-  
-  
-end
