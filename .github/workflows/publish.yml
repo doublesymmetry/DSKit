@@ -10,6 +10,11 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          repository: DoubleSymmetry/PrivatePodSpecs
+          token: ${{ secrets.CI_ACCESS }}
+          path: .github/actions
       - uses: maxim-lobanov/setup-cocoapods@v1
         with:
           version: 1.10.0
