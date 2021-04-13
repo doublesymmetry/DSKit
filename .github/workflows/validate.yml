@@ -1,0 +1,21 @@
+name: publish
+on: [push]
+jobs:
+  run-tests:
+    name: Test
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        destination:
+          [
+            'platform=iOS Simulator,name=iPhone 12 Pro',
+          ]
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Generate Xcodeproj
+        run: swift package generate-xcodeproj
+      - name: Run Tests
+        run: xcodebuild test -scheme DSKit-Package -destination "${destination}"
+        env:
+          destination: ${{ matrix.destination }}
