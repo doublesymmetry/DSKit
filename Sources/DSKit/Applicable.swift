@@ -22,7 +22,7 @@ extension Applicable {
     ///
     /// - Parameter closure: A closure with self as argument.
     /// - Returns: self
-    func apply(closure: Closure1<Self>) -> Self {
+    public func apply(closure: Closure1<Self>) -> Self {
         closure(self)
         return self
     }
