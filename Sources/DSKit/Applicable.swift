@@ -7,9 +7,9 @@
 
 import Foundation
 
-protocol Applicable { }
+public protocol Applicable { }
 
-extension Applicable {
+public extension Applicable {
     /// Apply receives a closure that has self as an argument. It enables you to directy configure and return an object without assigning it to a variable.
     ///
     /// Usage:
@@ -28,4 +28,4 @@ extension Applicable {
     }
 }
 
-extension NSObject: Applicable { }
+public extension NSObject: Applicable { }

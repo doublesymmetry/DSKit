@@ -5,7 +5,7 @@
 //  Created by Fabian Sulzbacher on 12.04.21.
 //
 
-extension Collection {
+public extension Collection {
     /// Returns the element at the specified index if it is within bounds, otherwise nil.
     /// 
     /// Usage:
@@ -16,7 +16,7 @@ extension Collection {
     /// // this will assign nil to the variable, because the index is not within the bounds of the array.
     /// let supportingActor = cast[safe: 4]
     /// ```
-    subscript (safe index: Index) -> Element? {
+    public subscript (safe index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }
 }
