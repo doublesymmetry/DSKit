@@ -28,4 +28,4 @@ public extension Applicable {
     }
 }
 
-public extension NSObject: Applicable { }
+extension NSObject: Applicable { }
