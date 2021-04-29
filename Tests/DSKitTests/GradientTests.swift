@@ -23,11 +23,4 @@ final class GradientTests: XCTestCase {
         XCTAssertEqual(gradient.stops.count, 6)
         XCTAssertEqual(gradient.stops.map { $0.location }, [0, 0.2, 0.4, 0.6, 0.8, 1])
     }
-
-    func testApplyBackgroundColor() {
-        let redView = UIView().apply {
-            $0.backgroundColor = .red
-        }
-        XCTAssertEqual(redView.backgroundColor, .red)
-    }
 }
