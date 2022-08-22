@@ -17,9 +17,6 @@ struct GradientColorConfiguration {
     let gradientColors: [GradientColor]
     let startPoint: CGPoint
     let endPoint: CGPoint
-
-    let colors: [CGColor] = gradientColors.map { $0.color }
-    let locations: [NSNumber] = gradientColors.map { $0.location }
 }
 
 class GradientLayer: CAGradientLayer {
@@ -36,8 +33,8 @@ class GradientLayer: CAGradientLayer {
 
     init(gradientColorConfiguration: GradientColorConfiguration, frame: CGRect) {
         super.init(layer: CAGradientLayer.self)
-        colors = gradientColorConfiguration.colors
-        locations = gradientColorConfiguration.locations
+        colors = gradientColorConfiguration.gradientColors.map { $0.color }
+        locations = gradientColorConfiguration.gradientColors.map { $0.location }
         startPoint = gradientColorConfiguration.startPoint
         endPoint = gradientColorConfiguration.endPoint
         self.frame = frame
