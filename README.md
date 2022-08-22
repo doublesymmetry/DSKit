@@ -9,8 +9,11 @@ Swift Package Manager is a tool for managing the distribution of Swift code. Itâ
 To integrate DSKit into your Xcode project using Swift Package Manager, add it to the dependencies value of your Package.swift:
 
 dependencies: [
-    .package(url: "https://github.com/DoubleSymmetry/DSKit.git", .upToNextMajor(from: "0.0.1"))
+     .package(url: "git@github.com:DoubleSymmetry/DSKit.git", .upToNextMajor(from: "0.0.1"))
 ]
+
+Make sure you are having a SSH key of type RSA.
+Be aware that DSKit is a private Repository.
 
 ## Creating a new version
 
