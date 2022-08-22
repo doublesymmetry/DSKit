@@ -14,11 +14,4 @@ extension UIView {
         mask.path = path.cgPath
         layer.mask = mask
     }
-
-    /**
-     Apply 8px corner radius
-     */
-    func applyStandardCornerRadius() {
-        self.layer.cornerRadius = 8
-    }
 }

@@ -14,7 +14,6 @@ extension UIView {
      Note: for color, pass in with alpha already set
      */
     func applyFigmaShadow(x: Int, y: Int, blur: CGFloat, spread: CGFloat, color: UIColor = .darkGray) {
-        // swiftlint:disable:previous identifier_name
         self.layer.masksToBounds = false
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOpacity = 1
