@@ -13,32 +13,13 @@ struct GradientColor {
     let location: NSNumber
 }
 
-enum GradientColorConfiguration {
-    case custom([GradientColor], CGPoint, CGPoint)
-    var colors: [CGColor] {
-        switch self {
-        case .custom(let gradientColors, _, _):
-            return gradientColors.map { $0.color }
-        }
-    }
-    var locations: [NSNumber] {
-        switch self {
-        case .custom(let gradientColors, _, _):
-            return gradientColors.map { $0.location }
-        }
-    }
-    var startPoint: CGPoint {
-        switch self {
-        case .custom(_, let startPoint, _):
-            return startPoint
-        }
-    }
-    var endPoint: CGPoint {
-        switch self {
-        case .custom(_, _, let endPoint):
-            return endPoint
-        }
-    }
+struct GradientColorConfiguration {
+    let gradientColors: [GradientColor]
+    let startPoint: CGPoint
+    let endPoint: CGPoint
+
+    let colors: [CGColor] = gradientColors.map { $0.color }
+    let locations: [NSNumber] = gradientColors.map { $0.location }
 }
 
 class GradientLayer: CAGradientLayer {
