@@ -8,6 +8,8 @@
 import UIKit
 
 extension UIColor {
+    /// initializes a UIColor from the corresponding 6-digit hexadecimal color code
+    /// example: UIColor.init(hex: "#0C0C1D")
     public convenience init?(hex: String) {
         let red, green, blue, alpha: CGFloat
 
