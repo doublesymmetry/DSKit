@@ -10,15 +10,15 @@ import UIKit
 
 class GradientLayer: CAGradientLayer {
 
-    struct GradientColor {
-        let color: CGColor
-        let location: NSNumber
-    }
-
-    struct GradientColorConfiguration {
+    struct Configuration {
         let gradientColors: [GradientColor]
         let startPoint: CGPoint
         let endPoint: CGPoint
+
+        struct GradientColor {
+            let color: CGColor
+            let location: NSNumber
+        }
     }
 
     @available(*, unavailable)
@@ -31,12 +31,12 @@ class GradientLayer: CAGradientLayer {
         super.init(layer: layer)
     }
 
-    init(gradientColorConfiguration: GradientColorConfiguration, frame: CGRect) {
+    init(configuration: Configuration, frame: CGRect) {
         super.init(layer: CAGradientLayer.self)
-        colors = gradientColorConfiguration.gradientColors.map { $0.color }
-        locations = gradientColorConfiguration.gradientColors.map { $0.location }
-        startPoint = gradientColorConfiguration.startPoint
-        endPoint = gradientColorConfiguration.endPoint
+        colors = configuration.gradientColors.map { $0.color }
+        locations = configuration.gradientColors.map { $0.location }
+        startPoint = configuration.startPoint
+        endPoint = configuration.endPoint
         self.frame = frame
     }
 }
