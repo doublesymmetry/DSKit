@@ -8,18 +8,18 @@
 import Foundation
 import UIKit
 
-struct GradientColor {
-    let color: CGColor
-    let location: NSNumber
-}
-
-struct GradientColorConfiguration {
-    let gradientColors: [GradientColor]
-    let startPoint: CGPoint
-    let endPoint: CGPoint
-}
-
 class GradientLayer: CAGradientLayer {
+
+    struct GradientColor {
+        let color: CGColor
+        let location: NSNumber
+    }
+
+    struct GradientColorConfiguration {
+        let gradientColors: [GradientColor]
+        let startPoint: CGPoint
+        let endPoint: CGPoint
+    }
 
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
