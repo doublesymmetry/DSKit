@@ -17,7 +17,7 @@ extension String {
                 "{" +
                 "font-size: \(size)px !important;" +
                 "color: \(color.hexValue) !important;" +
-                "font-family: \(fontFamily), Lato !important;" +
+                "font-family: \(fontFamily), San Francisco !important;" +
                 "}</style> \(self)"
 
             guard let data = htmlCSSString.data(using: String.Encoding.utf8) else { return nil }
