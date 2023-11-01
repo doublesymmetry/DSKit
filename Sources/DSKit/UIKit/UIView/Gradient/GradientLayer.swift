@@ -2,7 +2,7 @@
 //  GradientLayer.swift
 //  DSKit
 //
-//  Created by Fabian
+//  Created by Fabian Sulzbacher
 //
 
 import Foundation

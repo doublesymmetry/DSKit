@@ -1,6 +1,6 @@
 # DSKit
 
-## Requirements
+A collection of helpers across the Swift Language, UIKit and SwiftUI.
 
 ## Installation
 
@@ -9,22 +9,16 @@ Swift Package Manager is a tool for managing the distribution of Swift code. Itâ
 To integrate DSKit into your Xcode project using Swift Package Manager, add it to the dependencies value of your Package.swift:
 
 dependencies: [
-     .package(url: "git@github.com:DoubleSymmetry/DSKit.git", .upToNextMajor(from: "0.0.1"))
+     .package(url: "https://github.com/doublesymmetry/DSKit.git", .upToNextMajor(from: "0.0.1"))
 ]
 
-Make sure you are having a SSH key of type RSA.
-Be aware that DSKit is a private Repository.
+## Overview of Package
 
-## Creating a new version
-
-To create a new version, follow these steps:
-1. Tag latest commit with the new version number, e.g. **0.1.3**.
-2. Publish the tag.
-3. In a project that uses DSKit, have SPM try to update the dependency.
+_Coming later!_
 
 ## Author
 
-fabiandoublesymmetry, fabian@doublesymmetry.com
+Double Symmetry GmbH, oss@doublesymmetry.com
 
 ## License
 

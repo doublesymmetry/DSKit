@@ -3,22 +3,22 @@ on: [push]
 jobs:
   run-tests:
     name: Test
-    runs-on: [self-hosted, macOS, arm64e]
-    defaults:
-      run:
-        shell: "/usr/bin/arch -arch arm64e /bin/bash {0}"
+    runs-on: macos-13
     strategy:
       matrix:
+        xcode: [14.3.1, 15.0.1]
         destination:
           [
-            'platform=iOS Simulator,name=iPhone 12 Pro',
+            'platform=iOS Simulator,name=iPhone 14 Pro',
           ]
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Generate Xcodeproj
-        run: swift package generate-xcodeproj
+      - name: Setup Xcode
+        run: sudo xcode-select -s "/Applications/Xcode_${xcode}.app/Contents/Developer"
+        env:
+          xcode: ${{ matrix.xcode }}
       - name: Run Tests
-        run: xcodebuild test -scheme DSKit-Package -destination "${destination}"
+        run: xcodebuild test -scheme DSKit -destination "${destination}"
         env:
           destination: ${{ matrix.destination }}

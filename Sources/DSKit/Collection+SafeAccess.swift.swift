@@ -16,7 +16,7 @@ public extension Collection {
     /// // this will assign nil to the variable, because the index is not within the bounds of the array.
     /// let supportingActor = cast[safe: 4]
     /// ```
-    public subscript (safe index: Index) -> Element? {
+    subscript (safe index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }
 }

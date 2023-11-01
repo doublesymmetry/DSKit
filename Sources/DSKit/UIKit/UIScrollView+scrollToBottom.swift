@@ -3,7 +3,6 @@
 //  DSKit
 //
 //  Created by Jules on 23.06.22.
-//  Copyright © 2022 Double Symmetry GmbH. All rights reserved.
 //
 
 import UIKit.UIScrollView

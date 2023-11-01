@@ -3,7 +3,6 @@
 //  DSKit
 //
 //  Created by Fabian Sulzbacher on 24.05.22.
-//  Copyright © 2022 Double Symmetry GmbH. All rights reserved.
 //
 
 import Foundation
