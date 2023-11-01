@@ -1,5 +1,5 @@
 //
-//  Collection+SafeAccess.swift.swift
+//  Collection+SafeAccess.swift
 //  DSKit
 //
 //  Created by Fabian Sulzbacher on 12.04.21.
