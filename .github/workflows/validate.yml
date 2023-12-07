@@ -1,5 +1,10 @@
 name: publish
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize]
 jobs:
   run-tests:
     name: Test
