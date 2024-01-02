@@ -8,12 +8,14 @@
 import UIKit
 
 extension UIColor {
-    convenience init(hex: String) {
-        let (r, g, b, a) = hexToRGB(hex: hex)
+    convenience init?(hex: String) {
+        guard let (r, g, b, a) = hexToRGB(hex: hex) else {
+            return nil
+        }
         self.init(red: r, green: g, blue: b, alpha: a)
     }
 
-    var hexValue: String {
+    var hex: String {
         guard let components = cgColor.components, components.count >= 3 else {
             return ""
         }

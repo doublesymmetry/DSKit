@@ -15,7 +15,7 @@ extension String {
                 "html *" +
                 "{" +
                 "font-size: \(size)px !important;" +
-                "color: \(color.hexValue) !important;" +
+                "color: \(color.hex) !important;" +
                 "font-family: \(fontFamily), San Francisco !important;" +
                 "}</style> \(self)"
 
