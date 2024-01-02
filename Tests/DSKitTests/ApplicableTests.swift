@@ -1,9 +1,10 @@
 //
 //  ApplicableTests.swift
-//  
+//  DSKit
 //
 //  Created by Fabian Sulzbacher on 29.04.21.
 //
+
 import XCTest
 @testable import DSKit
 

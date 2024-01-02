@@ -1,9 +1,10 @@
 //
 //  GradientTests.swift
-//  
+//  DSKit
 //
 //  Created by David Chavez on 13.04.21.
 //
+
 import XCTest
 @testable import DSKit
 
