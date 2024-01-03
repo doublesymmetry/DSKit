@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class GradientLayer: CAGradientLayer {
+internal class GradientLayer: CAGradientLayer {
 
     struct Configuration {
         let gradientColors: [GradientColor]

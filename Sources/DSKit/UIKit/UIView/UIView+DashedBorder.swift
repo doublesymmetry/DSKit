@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct DashedBorderConfigurationItem {
+public struct DashedBorderConfigurationItem {
     var borderWidth: CGFloat
     var paintedSegmentWidth: NSNumber
     var unpaintedSegmentWidth: NSNumber
@@ -20,7 +20,7 @@ struct DashedBorderConfigurationItem {
  !! view needs to be laid out before **addDashedBorder** gets called on it !!
 e.g. call **layoutIfNeeded()** or override **layoutSubviews()** before adding the border
  */
-extension UIView {
+public extension UIView {
     func addDashedBorder(configuration: DashedBorderConfigurationItem) {
 
         layer.sublayers?.forEach {

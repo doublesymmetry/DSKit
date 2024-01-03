@@ -7,7 +7,7 @@
 
 import UIKit.UIView
 
-extension UIView {
+public extension UIView {
     /**
      Translates the Figma shadow properties into UIView shadow
 

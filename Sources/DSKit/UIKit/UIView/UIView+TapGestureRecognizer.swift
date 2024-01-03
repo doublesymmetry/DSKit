@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     // Enum to define associated object keys
     private enum AssociatedObjectKeys {
         static var tapGestureRecognizer = "DS_TapGestureRecognizerKey"
@@ -29,7 +29,7 @@ extension UIView {
     }
 
     // Adds a tap gesture recognizer to the view
-    @objc public func onTapGesture(perform action: @escaping () -> Void) {
+    @objc func onTapGesture(perform action: @escaping () -> Void) {
         isUserInteractionEnabled = true
         tapAction = action
 
