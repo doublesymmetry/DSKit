@@ -29,12 +29,14 @@ public extension UIView {
     }
 
     // Adds a tap gesture recognizer to the view
-    @objc func onTapGesture(perform action: @escaping () -> Void) {
+    @objc @discardableResult func onTapGesture(perform action: @escaping () -> Void) -> UITapGestureRecognizer {
         isUserInteractionEnabled = true
         tapAction = action
 
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
         addGestureRecognizer(tapGestureRecognizer)
+
+        return tapGestureRecognizer
     }
 
     // Handles the tap gesture
