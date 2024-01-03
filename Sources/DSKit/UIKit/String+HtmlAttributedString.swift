@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension String {
+public extension String {
     func toHtmlAttributedString(fontFamily: String = "San Francisco", size: CGFloat, color: UIColor) -> NSAttributedString? {
         do {
             let htmlCSSString = "<style>" +

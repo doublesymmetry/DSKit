@@ -7,7 +7,7 @@
 
 import UIKit.UIImageView
 
-extension UIImageView {
+public extension UIImageView {
     /**
      Calculates the height you need to constrain an imageView to,
      in case you set the imageView to a fixed width and want it to have the

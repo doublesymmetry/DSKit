@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     convenience init?(hex: String) {
         guard let (r, g, b, a) = hexToRGB(hex: hex) else {
             return nil

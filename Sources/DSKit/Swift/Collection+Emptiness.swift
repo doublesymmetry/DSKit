@@ -5,7 +5,7 @@
 //  Created by Milen Pivchev on 11/23/21.
 //
 
-extension Collection {
+public extension Collection {
     /// A Boolean value indicating whether the collection is **NOT** empty.
     ///
     /// When you need to check whether your collection is not empty, use the

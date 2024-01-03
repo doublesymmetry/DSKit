@@ -7,7 +7,7 @@
 
 import UIKit.UIImageView
 
-extension UIImageView {
+public extension UIImageView {
 
     /// Given that the url is pointing to an image,
     /// this function loads the image and sets it to the imageView.
