@@ -16,14 +16,14 @@ public extension UIColor {
     }
 
     var hex: String {
-        guard let components = cgColor.components, components.count >= 3 else {
-            return ""
-        }
-        
-        let red = Int(components[0] * 255)
-        let green = Int(components[1] * 255)
-        let blue = Int(components[2] * 255)
-        
-        return String(format: "#%02X%02X%02X", red, green, blue)
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+
+        getRed(&red, green: &green, blue: &blue, alpha: nil)
+
+        let rgb: Int = (Int)(red*255)<<16 | (Int)(green*255)<<8 | (Int)(blue*255)<<0
+
+        return String(format: "#%06x", rgb)
     }
 }
