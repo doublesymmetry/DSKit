@@ -8,14 +8,11 @@ on:
 jobs:
   run-tests:
     name: Test
-    runs-on: macos-13
+    runs-on: blaze/macos-14
     strategy:
       matrix:
         xcode: [14.3.1, 15.0.1]
-        destination:
-          [
-            'platform=iOS Simulator,name=iPhone 14 Pro',
-          ]
+        destination: ["platform=iOS Simulator,name=iPhone 14 Pro"]
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
